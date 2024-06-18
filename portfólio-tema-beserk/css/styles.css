@@ -49,14 +49,14 @@
   border-right: 1px solid var(--bio-border-color); /* Adiciona uma borda à direita
    */
 
-  background-image: url(/img/ww.jfif);
+  background-image: url(/img/img-aside.png);
   background-repeat: no-repeat;
   background-size: cover;
   animation: float 5s ease-in-out infinite; /* Animação de flutuação */
   transition: background-image 2s ease-in-out;
 }
 #bio-container:hover{
-  background-image: url(/img/Guts\ walking\ -\ Wallpaper\ B_W.jfif);
+  background-image: url(/img/img-hover.png)
 }
 
 

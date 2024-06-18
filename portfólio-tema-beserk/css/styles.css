@@ -1,0 +1,269 @@
+/* Reset */
+* {
+  padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+  margin: 0; /* Remove a margem padrão de todos os elementos */
+  font-family: 'Roboto', sans-serif; /* Define a fonte padrão como Roboto */
+  box-sizing: border-box; /* Inclui bordas e preenchimento nas medidas de largura e altura */
+}
+
+/* Variáveis */
+:root {
+  --main-color: #FF323D; /* Define a cor principal */
+  --main-text-color: #D9D9D9; /* Define a cor do texto principal */
+  --border-color: #D9D9D9; /* Define a cor da borda */
+  --bio-bg-color: #0D0D0D; /* Define a cor de fundo da seção biográfica */
+  --bio-border-color: #D9D9D9; /* Define a cor da borda da seção biográfica */
+  --about-bg-color: #0D0D0D; /* Define a cor de fundo da seção sobre (*/
+}
+
+/* Geral */
+.highlight {
+  color: var(--main-color); /* Aplica a cor principal aos elementos com a classe "highlight" */
+}
+
+/* Contêineres */
+#container {
+  display: flex; /* Define o contêiner como um flexbox */
+  flex-direction: row; /* Organiza os filhos em uma linha */
+  color: var(--main-text-color); /* Define a cor do texto */
+ 
+}
+@keyframes float {
+  0% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 60% 60%;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+
+#bio-container {
+  flex: 1 1 20%; /* Define a flexibilidade e largura base de 20% */
+  min-height: 100vh; /* Define altura mínima de 100% da altura da viewport */
+  background-color: var(--bio-bg-color); /* Define a cor de fundo */
+  text-align: center; /* Centraliza o texto */
+  padding: 30px 50px; /* Define preenchimento interno */
+  border-right: 1px solid var(--bio-border-color); /* Adiciona uma borda à direita
+   */
+
+  background-image: url(/img/ww.jfif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: float 5s ease-in-out infinite; /* Animação de flutuação */
+  transition: background-image 2s ease-in-out;
+}
+#bio-container:hover{
+  background-image: url(/img/Guts\ walking\ -\ Wallpaper\ B_W.jfif);
+}
+
+
+#about-container {
+  flex: 1 1 80%; /* Define a flexibilidade e largura base de 80% */
+  min-height: 100vh; /* Define altura mínima de 100% da altura da viewport */
+  background-color: var(--about-bg-color); /* Define a cor de fundo */
+  padding: 50px; /* Define preenchimento interno */
+}
+
+/* Contêiner biográfico */
+#bio-container h2 {
+  margin-bottom: 25px; /* Define margem inferior */
+}
+
+#bio-container p {
+  margin-bottom: 20px; /* Define margem inferior */
+}
+
+#bio-container #welcome-text {
+  font-weight: bold; /* Define o texto como negrito */
+}
+
+#bio-image {
+  width: 175px; /* Define a largura da imagem */
+  height: 175px; /* Define a altura da imagem */
+  border-radius: 50%; /* Define bordas arredondadas */
+  margin-bottom: 25px; /* Define margem inferior */
+}
+#bio-image:hover{ 
+  background-image: url(/img/gutts-02.jfif);
+  background-repeat: no-repeat
+}
+
+#social-container {
+  display: flex; /* Define o contêiner como um flexbox */
+  justify-content: center; /* Centraliza os itens no eixo principal */
+  list-style: none; /* Remove marcadores de lista */
+  border-bottom: 1px solid var(--border-color); /* Adiciona uma borda inferior */
+  margin-bottom: 25px; /* Define margem inferior */
+  padding-bottom: 25px; /* Define preenchimento inferior */
+}
+
+#social-container li {
+  flex: 1 1 0; /* Define a flexibilidade e largura base */
+  max-width: 60px; /* Define a largura máxima */
+}
+
+#social-container li a {
+  /*color: var(--main-color); /* Define a cor do link */
+  font-size: 30px; /* Define o tamanho da fonte */
+  color: #FF323D;
+}
+
+
+#email-container {
+  display: flex; /* Define o contêiner como um flexbox */
+  justify-content: center; /* Centraliza os itens no eixo principal */
+}
+#email-container a:hover {
+ color: #FF323D;
+}
+
+#email-container ion-icon,
+#email-container a {
+  flex: 1 1 0; /* Define a flexibilidade e largura base */
+}
+
+#email-container a {
+  color: var(--main-text-color); /* Define a cor do link */
+  text-decoration: none; /* Remove a sublinhado do link */
+  max-width: 225px; /* Define a largura máxima */
+}
+
+#email-container ion-icon {
+  color: var(--main-color); /* Define a cor do ícone */
+  font-size: 20px; /* Define o tamanho da fonte */
+  margin-right: 5px; /* Define margem direita */
+  max-width: 20px; /* Define a largura máxima */
+}
+
+/* Contêiner sobre */
+#name {
+  font-size: 42px; /* Define o tamanho da fonte */
+  margin-bottom: 15px; /* Define margem inferior */
+}
+
+#title {
+  font-size: 24px; /* Define o tamanho da fonte */
+  margin-bottom: 15px; /* Define margem inferior */
+  font-weight: bold; /* Define o texto como negrito */
+}
+
+.description {
+  max-width: 75%; /* Define a largura máxima */
+  margin-bottom: 10px; /* Define margem inferior */
+}
+
+#btn-projects {
+  font-weight: bold; /* Define o texto como negrito */
+  font-size: 16px; /* Define o tamanho da fonte */
+  /*color: var(--main-text-color); /* Define a cor do texto */
+  background-color: var(--main-color); /* Define a cor de fundo */
+  border: 2px solid var(--main-color); /* Define a cor e largura da borda */
+  border-radius: 5px; /* Define bordas arredondadas */
+  text-decoration: none; /* Remove a sublinhado do link */
+  transition: .5s; /* Define a transição para hover */
+  margin: 25px 0; /* Define margens superior e inferior */
+  padding: 12px 10px; /* Define preenchimento interno */
+  width: 150px; /* Define a largura */
+  text-align: center; /* Centraliza o texto */
+  display: flex; /* Define o contêiner como um flexbox */
+ color: #0D0D0D;
+}
+
+#btn-projects ion-icon,
+#btn-projects span {
+  flex: 1 1 0; /* Define a flexibilidade e largura base */
+}
+
+#btn-projects ion-icon {
+  font-size: 20px; /* Define o tamanho da fonte */
+  max-width: 20px; /* Define a largura máxima */
+}
+
+#btn-projects:hover {
+  background-color: transparent; /* Define a cor de fundo transparente ao passar o mouse */
+  color: #D9D9D9;
+}
+
+#skills-section-title {
+  border-top: 1px solid var(--border-color); /* Adiciona uma borda superior */
+  padding-top: 20px; /* Define preenchimento superior */
+  margin-bottom: 20px; /* Define margem inferior */
+  font-size: 32px; /* Define o tamanho da fonte */
+}
+
+#skills-container {
+  display: flex; /* Define o contêiner como um flexbox */
+  flex-wrap: wrap; /* Permite que os itens quebrem em várias linhas */
+  margin-top: 25px; /* Define margem superior */
+}
+
+.skills-box {
+  flex: 1 1 33%; /* Define a flexibilidade e largura base */
+  max-width: 33%; /* Define a largura máxima */
+  margin-bottom: 35px; /* Define margem inferior */
+}
+
+.skills-title {
+  font-size: 24px; /* Define o tamanho da fonte */
+  margin-bottom: 25px; /* Define margem inferior */
+  font-weight: bold; /* Define o texto como negrito */
+  padding-left: 10px; /* Define preenchimento à esquerda */
+  border-left: 5px solid var(--main-color); /* Adiciona uma borda à esquerda */
+}
+
+.skills-box i {
+  font-size: 45px; /* Define o tamanho da fonte */
+  margin-right: 10px; /* Define margem direita */
+}
+
+/* Estilos para dispositivos móveis */
+@media(max-width: 450px) {
+
+  #container {
+    flex-direction: column; /* Muda a direção do flexbox para coluna */
+  }
+
+  #bio-container {
+    min-height: auto; /* Define a altura mínima automática */
+    border-right: none; /* Remove a borda direita */
+    border-bottom: 5px solid var(--bio-border-color); /* Adiciona uma borda inferior */
+  }
+
+  #bio-container h2 {
+    display: none; /* Esconde o título na seção biográfica */
+  }
+
+  #bio-container p {
+    max-width: 60%; /* Define a largura máxima */
+    margin: 10px auto; /* Define margens automáticas */
+  }
+
+  #about-container {
+    text-align: center; /* Centraliza o texto */
+    padding: 30px; /* Define preenchimento interno */
+  }
+
+  #about-container .description {
+    margin: 10px auto; /* Define margens automáticas */
+    max-width: 100%; /* Define a largura máxima */
+    line-height: 26px; /* Define a altura da linha */
+  }
+
+  #btn-projects {
+    margin: 20px auto; /* Define margens automáticas */
+  }
+
+  .skills-box {
+    flex: 1 1 100%; /* Define a flexibilidade e largura base */
+    max-width: 100%; /* Define a largura máxima */
+    margin-bottom: 40px; /* Define margem inferior */
+    text-align: left; /* Alinha o texto à esquerda */
+  }
+
+  .skills-box i {
+    font-size: 60px; /* Define o tamanho da fonte */
+  }
+}
